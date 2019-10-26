@@ -99,7 +99,7 @@ $( "svg" ).click(function() {
 	$( ".container" ).append( "<div style='height:100%;width:100%;' id='Phase1'> </div>" );
 
 
-	$( "#Phase1" ).append( "<video id='Phase1V' width='100%' height='100%' autoplay><source src='vid/test.mp4' type='video/mp4'>Your browser does not support the video tag.</video>" );
+	$( "#Phase1" ).append( "<video id='Phase1V' width='100%' height='100%' autoplay><source src='vid/bb_txt.mp4' type='video/mp4'>Your browser does not support the video tag.</video>" );
 
 	/* When video 1 ends */
     $('#Phase1V').on('ended',function(){
@@ -119,7 +119,9 @@ $( "svg" ).click(function() {
       	$("#astro_txt").empty();
 
       	/* PHASE 2 */
-		$("#astro_txt").append("Click on one of the Atoms, and simply drag it on top of the other one the witness an awsome reaction ! <button id='temp'> SolarSys </button>")
+      	$('#astro_txt').css({'margin-top':'-32px'}); /* Adjust AstroyBoy's Position */
+		$("#astro_txt").append("<p style='color:red;'>Helium</p> and <p style='color:blue;'>hydrogen</p> where the first atoms after the big bang drag and drop an atom onto the other the witness their awsome reaction! If you're done <h1 id='temp' style='color:blue;cursor:pointer;'> Click Here ! </h1>")
+
 
 		/* ACHIEVEMENT UNLOCKED WHEN ATOMS COLLIDE */
 		$('#AC2').removeClass('fas fa-question');
@@ -130,6 +132,7 @@ $( "svg" ).click(function() {
 		$("#notif_main").fadeOut(10000);
 
 		$("#temp").click(function(){
+			$('#astro_txt').css({'margin-top':'0px'}); /* Adjust AstroyBoy's Position */
 
 			/* Game Progress */
 			$(".progress-steps-connector").animate({width:"27%"},2000)
@@ -145,7 +148,7 @@ $( "svg" ).click(function() {
 			$(".container").append("<div style='height:100%;width:100%;' id='Phase2'></div>");
 
 			/* Phase 2 Video */
-			$("#Phase2").append("<video id='Phase2V' width='100%' height='100%' autoplay><source src='vid/test.mp4' type='video/mp4'>Your browser does not support the video tag.</video>");
+			$("#Phase2").append("<video id='Phase2V' width='100%' height='100%' autoplay><source src='vid/solarsys_txt.mp4' type='video/mp4'>Your browser does not support the video tag.</video>");
 			$("#astro_container").fadeOut(5000);
 
 			/* Game Progress */
@@ -231,7 +234,7 @@ $( "svg" ).click(function() {
 					/* Add video */
 				  	$(".container").empty();
 				  	$(".container").append("<div style='height:100%;with:100%;' id='Phase3'></div>");
-				  	$("#Phase3").append("<video muted id='Phase3V' width='100%' height='100%' autoplay><source src='vid/test.mp4' type='video/mp4'>Your browser does not support the video tag.</video>");
+				  	$("#Phase3").append("<video  id='Phase3V' width='100%' height='100%' autoplay><source src='vid/moonEarth_txt.mp4' type='video/mp4'>Your browser does not support the video tag.</video>");
 
 				  	/* ACHIEVEMENT UNLOCKED */
 					$('#AC4').removeClass('fas fa-question');
@@ -318,7 +321,7 @@ $( "svg" ).click(function() {
 
 											$( ".container" ).empty();
 											$( ".container" ).append( "<div style='height:100%;width:100%;' id='End'> </div>" );
-											$("#End").append("<video id='End_vid' width='100%' height='100%' autoplay><source src='vid/test.mp4' type='video/mp4'>Your browser does not support the video tag.</video>")
+											$("#End").append("<video id='End_vid' width='100%' height='100%' autoplay><source src='vid/life.mp4' type='video/mp4'>Your browser does not support the video tag.</video>")
 
 											$('#End_vid').on('ended',function(){
 												$("#astro_container").fadeIn(2000);
