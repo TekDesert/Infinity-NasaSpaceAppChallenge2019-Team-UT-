@@ -1,3 +1,5 @@
+Infinity is an ambitious web Game conceived to combine education and entertainement in a User Friendly platform accessible for people of any background!
+
 Infinity(V1) allows you to interact with the 4 phases in the following way :
 
 Phase 1) The Big Bang : the big bang explained through an interactive video followed up by an Atom Drag and Drop Game
